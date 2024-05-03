@@ -1,0 +1,25 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.VucutKitleIndexi"
+             Title="Vücut Kitle İndeksi"
+             BackgroundColor="#1E1E1E">
+
+    <StackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
+
+        <Entry Placeholder="Ağırlık (kg)" x:Name="txtAgirlik" BackgroundColor="#333333" TextColor="White"/>
+
+        <Slider x:Name="sliderAgirlik" Maximum="200" Minimum="0" Value="{Binding Source={x:Reference txtAgirlik}, Path=Text, Mode=TwoWay}" WidthRequest="300" BackgroundColor="#333333" MinimumTrackColor="#FAFAFA" ThumbColor="#FAFAFA" />
+
+        <Entry Placeholder="Boy (cm)" x:Name="txtBoy" BackgroundColor="#333333" TextColor="White"/>
+
+        <Slider x:Name="sliderBoy" Maximum="220" Minimum="0" Value="{Binding Source={x:Reference txtBoy}, Path=Text, Mode=TwoWay}" WidthRequest="300" BackgroundColor="#333333" MinimumTrackColor="#FAFAFA" ThumbColor="#FAFAFA" />
+
+        <Button Text="Hesapla" Clicked="Hesapla_Clicked" BackgroundColor="#FAFAFA" TextColor="#1E1E1E" CornerRadius="15" Margin="0,20"/>
+
+        <Frame CornerRadius="15" BackgroundColor="#333333" Padding="10" Margin="0,20">
+            <Label Text="Vücut Kitle İndeksi: " x:Name="lblVKI" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

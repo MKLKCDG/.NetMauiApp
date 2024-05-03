@@ -1,0 +1,18 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             xmlns:local="clr-namespace:MauiApp1"
+             BackgroundColor="White"
+             Title="Ana Sayfa">
+
+    <Grid RowDefinitions="*, Auto, *" ColumnDefinitions="Auto, *, Auto" Padding="50">
+        <Image Source="pp.png"  Grid.RowSpan="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" />
+
+        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+            <Label Text="Mikail KOCADAĞ" TextColor="DarkBlue" FontSize="30" />
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="16" TextColor="DarkBlue"/>
+            <Label Text="Proje-1" FontSize="50" HorizontalOptions="Center" TextColor="DarkBlue"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

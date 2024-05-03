@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.KrediHesaplama"
+             xmlns:local="clr-namespace:MauiApp1"
+             Title="Kredi Hesaplama">
+
+    <ScrollView BackgroundColor="#F8F8F8">
+        <StackLayout Spacing="20" Padding="20">
+            <Picker Title="Kredi Türü Seçiniz" x:Name="pickerKrediTuru" ItemsSource="{StaticResource krediTurleri}" BackgroundColor="#EFEFEF" TitleColor="#333333" TextColor="#333333"/>
+            <Entry Placeholder="Kredi Tutarı (₺)" x:Name="txtKrediTutari" BackgroundColor="#EFEFEF" TextColor="#333333" Keyboard="Numeric"/>
+            <Entry Placeholder="Yıllık Faiz Oranı (%)" x:Name="txtFaizOrani" BackgroundColor="#EFEFEF" TextColor="#333333" Keyboard="Numeric"/>
+            <Entry Placeholder="Vade (Ay)" x:Name="txtVade" BackgroundColor="#EFEFEF" TextColor="#333333" Keyboard="Numeric" TextChanged="TxtVade_TextChanged"/>
+            <Slider x:Name="sliderVade" Maximum="60" Minimum="1" BackgroundColor="#EFEFEF"/>
+            <Button Text="Hesapla" Clicked="Hesapla_Clicked" BackgroundColor="#333333" TextColor="White" CornerRadius="10" HorizontalOptions="Center" Margin="0,20,0,0"/>
+            <Label Text="Aylık Taksit" FontAttributes="Bold" TextColor="#333333"/>
+            <Label x:Name="lblAylıkTaksit" TextColor="#333333"/>
+            <Label Text="Toplam Ödeme" FontAttributes="Bold" TextColor="#333333"/>
+            <Label x:Name="lblToplamOdeme" TextColor="#333333"/>
+            <Label Text="Toplam Faiz" FontAttributes="Bold" TextColor="#333333"/>
+            <Label x:Name="lblToplamFaiz" TextColor="#333333"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
